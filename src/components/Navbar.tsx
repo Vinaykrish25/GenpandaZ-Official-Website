@@ -37,7 +37,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Button variant="gradient" size="sm" asChild>
             <a href="#contact">Get Started</a>
           </Button>
