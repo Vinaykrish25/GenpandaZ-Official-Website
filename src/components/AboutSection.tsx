@@ -16,7 +16,7 @@ const AboutSection = () => (
             Who We <span className="gradient-text">Are</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            GenPandaZ is a young, data-driven digital agency passionate about crafting exceptional digital experiences. We combine creativity with analytics to deliver solutions that look stunning and perform even better.
+            GenpandaZ is a young, data-driven digital agency passionate about crafting exceptional digital experiences. We combine creativity with analytics to deliver solutions that look stunning and perform even better.
           </p>
         </div>
       </ScrollReveal>

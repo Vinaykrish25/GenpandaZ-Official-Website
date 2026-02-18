@@ -15,9 +15,7 @@ const WhyChooseUsSection = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <ScrollReveal>
-          <h2 className="font-display text-3xl md:text-5xl font-bold">
-            Why Choose <span className="gradient-text">GenPandaZ</span>?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose GenpandaZ?</h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
             We don't just build websites — we build growth engines. Our team combines creativity, strategy, and technology to deliver results you can measure.
           </p>

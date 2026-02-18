@@ -3,7 +3,11 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
-          <span className="font-display text-xl font-bold gradient-text">GenPandaZ</span>
+          <img 
+            src="/Gen PandaZ logo.png" 
+            alt="GenpandaZ" 
+            className="h-40 w-auto mb-4" 
+          />
           <p className="mt-3 text-sm text-muted-foreground max-w-sm leading-relaxed">
             A young, bold digital agency building brands through design, development, and data-driven marketing.
           </p>
@@ -26,7 +30,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="mt-10 pt-6 border-t border-border text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} GenPandaZ. All rights reserved.
+        © {new Date().getFullYear()} GenpandaZ. All rights reserved.
       </div>
     </div>
   </footer>

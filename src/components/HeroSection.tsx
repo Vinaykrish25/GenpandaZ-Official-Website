@@ -38,7 +38,7 @@ const HeroSection = () => (
         transition={{ duration: 0.7, delay: 0.2 }}
         className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance"
       >
-        GenPandaZ is a young, bold digital agency turning ideas into powerful brands through design, development, and data-driven marketing.
+        GenpandaZ is a young, bold digital agency turning ideas into powerful brands through design, development, and data-driven marketing.
       </motion.p>
 
       <motion.div

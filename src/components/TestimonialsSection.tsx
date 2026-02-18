@@ -2,7 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Sarah Chen", role: "CEO, TechVentures", text: "GenPandaZ transformed our online presence completely. Their data-driven approach delivered a 3x increase in conversions." },
+  { name: "Sarah Chen", role: "CEO, TechVentures", text: "GenpandaZ transformed our online presence completely. Their data-driven approach delivered a 3x increase in conversions." },
   { name: "Marcus Johnson", role: "Founder, GrowFast", text: "The team is incredibly talented and responsive. Our new website exceeded all expectations in design and performance." },
   { name: "Emily Rodriguez", role: "Marketing Director", text: "Their SEO and marketing strategies helped us dominate search rankings. Truly a game-changer for our business." },
 ];
@@ -12,9 +12,10 @@ const TestimonialsSection = () => (
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-display text-3xl md:text-5xl font-bold">
-            What Clients <span className="gradient-text">Say</span>
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Discover why businesses trust GenpandaZ for their digital growth.
+          </p>
         </div>
       </ScrollReveal>
 

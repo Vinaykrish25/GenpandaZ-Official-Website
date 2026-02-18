@@ -18,8 +18,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="font-display text-xl font-bold gradient-text">
-          GenPandaZ
+        <a href="#" className="flex items-center">
+          <img 
+            src="/Gen PandaZ logo.png" 
+            alt="GenpandaZ" 
+            className="h-40 w-auto" 
+          />
         </a>
 
         {/* Desktop */}
