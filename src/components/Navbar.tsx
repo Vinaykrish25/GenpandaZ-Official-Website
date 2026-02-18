@@ -45,7 +45,7 @@ const Navbar = () => {
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-2">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Button variant="ghost" size="icon" onClick={() => setOpen(!open)}>
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
