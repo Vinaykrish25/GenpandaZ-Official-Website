@@ -10,14 +10,43 @@ const ContactSection = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      toast({ title: "Message sent!", description: "We'll get back to you shortly." });
+    
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formspree.io/f/mvzbqaqr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast({ title: "Message sent!", description: "We'll get back to you shortly." });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        const errorData = await response.json();
+        toast({ 
+          title: "Error", 
+          description: errorData.error || "Failed to send message. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({ 
+        title: "Error", 
+        description: "Something went wrong. Please check your connection.",
+        variant: "destructive"
+      });
+    } finally {
       setLoading(false);
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    }
   };
 
   return (
@@ -35,10 +64,10 @@ const ContactSection = () => {
         <div className="mt-16 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <ScrollReveal>
             <form onSubmit={handleSubmit} className="space-y-5">
-              <Input placeholder="Your Name" required maxLength={100} className="bg-card" />
-              <Input type="email" placeholder="Your Email" required maxLength={255} className="bg-card" />
-              <Input placeholder="Subject" required maxLength={200} className="bg-card" />
-              <Textarea placeholder="Your Message" required maxLength={1000} rows={5} className="bg-card" />
+              <Input name="name" placeholder="Your Name" required maxLength={100} className="bg-card" />
+              <Input name="email" type="email" placeholder="Your Email" required maxLength={255} className="bg-card" />
+              <Input name="subject" placeholder="Subject" required maxLength={200} className="bg-card" />
+              <Textarea name="message" placeholder="Your Message" required maxLength={1000} rows={5} className="bg-card" />
               <Button type="submit" variant="gradient" size="lg" className="w-full" disabled={loading}>
                 {loading ? "Sending..." : "Send Message"}
               </Button>
