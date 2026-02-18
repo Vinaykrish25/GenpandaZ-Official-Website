@@ -1,0 +1,85 @@
+import { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const ContactSection = () => {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      toast({ title: "Message sent!", description: "We'll get back to you shortly." });
+      setLoading(false);
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
+
+  return (
+    <section id="contact" className="py-24">
+      <div className="container mx-auto px-4">
+        <ScrollReveal>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Let's <span className="gradient-text">Talk</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">Ready to start your project? Reach out today.</p>
+          </div>
+        </ScrollReveal>
+
+        <div className="mt-16 grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <ScrollReveal>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <Input placeholder="Your Name" required maxLength={100} className="bg-card" />
+              <Input type="email" placeholder="Your Email" required maxLength={255} className="bg-card" />
+              <Input placeholder="Subject" required maxLength={200} className="bg-card" />
+              <Textarea placeholder="Your Message" required maxLength={1000} rows={5} className="bg-card" />
+              <Button type="submit" variant="gradient" size="lg" className="w-full" disabled={loading}>
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.15}>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <div className="h-10 w-10 rounded-lg gradient-bg flex items-center justify-center shrink-0">
+                  <Mail className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Email Us</h4>
+                  <p className="text-muted-foreground text-sm">hello@genpandaz.com</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="h-10 w-10 rounded-lg gradient-bg flex items-center justify-center shrink-0">
+                  <Phone className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Call Us</h4>
+                  <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="h-10 w-10 rounded-lg gradient-bg flex items-center justify-center shrink-0">
+                  <MapPin className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <h4 className="font-semibold">Visit Us</h4>
+                  <p className="text-muted-foreground text-sm">Remote-first, worldwide</p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
