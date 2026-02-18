@@ -7,7 +7,7 @@ const services = [
   { icon: Globe, title: "Website Development", desc: "E-commerce, SaaS, and portfolio sites built with modern tech stacks for speed and scalability." },
   { icon: Wrench, title: "Website Maintenance", desc: "Ongoing support, updates, and performance monitoring to keep your site running flawlessly." },
   { icon: Megaphone, title: "Digital Marketing", desc: "SEO, social media marketing, and paid campaigns that drive real, measurable results." },
-  { icon: Video, title: "Video Editing", desc: "Professional video editing for ads, reels, and brand storytelling that captivates audiences." },
+  // { icon: Video, title: "Video Editing", desc: "Professional video editing for ads, reels, and brand storytelling that captivates audiences." },
   { icon: Palette, title: "Graphic & Poster Design", desc: "Eye-catching visuals, brand identity, and marketing materials that stand out." },
   { icon: BarChart3, title: "Website Analytics", desc: "Data-driven insights and reporting to understand user behavior and optimize conversions." },
   { icon: Bot, title: "Automation", desc: "Email, call, and form automation to streamline workflows and boost efficiency." },

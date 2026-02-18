@@ -21,7 +21,7 @@ const AboutSection = () => (
         </div>
       </ScrollReveal>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
         {stats.map((s, i) => (
           <ScrollReveal key={s.label} delay={i * 0.1}>
             <div className="glass-card rounded-2xl p-8 text-center hover:scale-105 transition-transform duration-300">
@@ -31,7 +31,7 @@ const AboutSection = () => (
             </div>
           </ScrollReveal>
         ))}
-      </div>
+      </div> */}
     </div>
   </section>
 );

@@ -15,7 +15,7 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold text-sm mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            {["About", "Services", "Portfolio", "Blog", "Contact"].map((l) => (
+            {["About", "Services", "Portfolio", "Contact"].map((l) => (
               <li key={l}><a href={`#${l.toLowerCase()}`} className="hover:text-foreground transition-colors">{l}</a></li>
             ))}
           </ul>
@@ -23,7 +23,7 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold text-sm mb-3">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            {["Web Development", "Digital Marketing", "Video Editing", "Automation"].map((s) => (
+            {["Web Development", "Digital Marketing", "Automation", "Web Analytics", "Graphic & Poster Design"].map((s) => (
               <li key={s}><span>{s}</span></li>
             ))}
           </ul>

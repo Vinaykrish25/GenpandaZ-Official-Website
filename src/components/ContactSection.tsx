@@ -53,7 +53,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email Us</h4>
-                  <p className="text-muted-foreground text-sm">hello@genpandaz.com</p>
+                  <p className="text-muted-foreground text-sm">genpandaztech@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -62,7 +62,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Call Us</h4>
-                  <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground text-sm">+91 98942 75856</p>
+                  <p className="text-muted-foreground text-sm">+91 86105 75439</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
