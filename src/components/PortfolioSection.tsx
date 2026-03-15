@@ -1,13 +1,28 @@
 import ScrollReveal from "./ScrollReveal";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, School, Utensils, HardHat } from "lucide-react";
 
 const projects = [
-  { title: "E-Commerce Platform", category: "Web Development", color: "from-primary to-accent" },
-  { title: "Brand Identity Design", category: "Graphic Design", color: "from-accent to-primary" },
-  { title: "SEO Campaign", category: "Digital Marketing", color: "from-primary/80 to-accent/80" },
-  { title: "SaaS Dashboard", category: "Web Development", color: "from-accent/80 to-primary" },
-  { title: "Social Media Strategy", category: "Marketing", color: "from-primary to-accent/70" },
-  { title: "Video Ad Campaign", category: "Video Editing", color: "from-accent/70 to-primary/80" },
+  { 
+    title: "School Management", 
+    category: "Web Application", 
+    color: "from-blue-500 to-indigo-600",
+    icon: School,
+    link: "https://school-management-demo-eta.vercel.app/"
+  },
+  { 
+    title: "Restaurant Booking", 
+    category: "Booking System", 
+    color: "from-orange-500 to-red-600",
+    icon: Utensils,
+    link: "https://restaurantbooking-8h7iu56.public.builtwithrocket.new/"
+  },
+  { 
+    title: "Construction Company", 
+    category: "Portfolio Website", 
+    color: "from-yellow-600 to-orange-700",
+    icon: HardHat,
+    link: "https://constructionpro-ryvs519.public.builtwithrocket.new/"
+  },
 ];
 
 const PortfolioSection = () => (
@@ -27,15 +42,23 @@ const PortfolioSection = () => (
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, i) => (
           <ScrollReveal key={p.title} delay={i * 0.08}>
-            <div className="group glass-card rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300">
-              <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center`}>
-                <ExternalLink className="h-8 w-8 text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+            <a 
+              href={p.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group block glass-card rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300"
+            >
+              <div className={`h-48 bg-gradient-to-br ${p.color} flex flex-col items-center justify-center relative`}>
+                <p.icon className="h-16 w-16 text-white mb-2" />
+                <div className="absolute top-4 right-4 bg-white/20 p-2 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ExternalLink className="h-5 w-5 text-white" />
+                </div>
               </div>
               <div className="p-5">
                 <p className="text-xs font-medium text-primary uppercase tracking-wider">{p.category}</p>
                 <h3 className="font-display text-lg font-semibold mt-1">{p.title}</h3>
               </div>
-            </div>
+            </a>
           </ScrollReveal>
         ))}
       </div>
