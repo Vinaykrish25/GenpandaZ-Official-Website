@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import { ExternalLink, School, Utensils, HardHat } from "lucide-react";
+import { ExternalLink, School, Utensils, HardHat, ShoppingBag } from "lucide-react";
 
 const projects = [
   { 
@@ -8,6 +8,13 @@ const projects = [
     color: "from-blue-500 to-indigo-600",
     icon: School,
     link: "https://school-management-demo-eta.vercel.app/"
+  },
+  { 
+    title: "E-commerce Dress", 
+    category: "E-commerce Website", 
+    color: "from-purple-500 to-pink-600",
+    icon: ShoppingBag,
+    link: "https://e-commerce-sample-website-frontend-qeemzqm27.vercel.app"
   },
   { 
     title: "Restaurant Booking", 
