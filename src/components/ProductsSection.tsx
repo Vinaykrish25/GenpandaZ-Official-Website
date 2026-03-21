@@ -1,12 +1,13 @@
 import ScrollReveal from "./ScrollReveal";
 import { Mail, Layout, ExternalLink } from "lucide-react";
+import mailproImg from "../assets/products/mailpro.png";
 
 const products = [
   {
     title: "MailPro",
     description: "AI-powered email generator and sender via Gmail.",
     category: "AI Tool",
-    color: "from-purple-500 to-pink-600",
+    image: mailproImg,
     icon: Mail,
     link: "https://genmail-pro-ai.vercel.app/",
     status: "Active"
@@ -40,9 +41,23 @@ const ProductsSection = () => (
         {products.map((p, i) => (
           <ScrollReveal key={p.title} delay={i * 0.1}>
             <div className="group relative glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-300">
-              <div className={`h-40 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
-                <p.icon className="h-16 w-16 text-white relative z-10" />
+              <div className={`h-56 flex items-center justify-center relative overflow-hidden ${!p.image ? `bg-gradient-to-br ${p.color}` : ''}`}>
+                {p.image ? (
+                  <img 
+                    src={p.image} 
+                    alt={p.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <p.icon className="h-16 w-16 text-white relative z-10" />
+                )}
+                
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                   <div className="bg-white/20 p-3 rounded-full backdrop-blur-md">
+                    <p.icon className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+
                 {p.status === "Active" ? (
                    <a 
                    href={p.link} 
@@ -53,7 +68,7 @@ const ProductsSection = () => (
                    <ExternalLink className="h-5 w-5 text-white" />
                  </a>
                 ) : (
-                  <span className="absolute top-4 right-4 bg-primary/20 text-primary-foreground text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter backdrop-blur-md border border-primary/30">
+                  <span className="absolute top-4 right-4 bg-primary/20 text-primary-foreground text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter backdrop-blur-md border border-primary/30 z-20">
                     {p.status}
                   </span>
                 )}
@@ -79,7 +94,7 @@ const ProductsSection = () => (
                 )}
               </div>
               {p.status === "Coming Soon" && (
-                <div className="absolute inset-0 bg-background/40 backdrop-blur-[1px] pointer-events-none flex items-center justify-center">
+                <div className="absolute inset-0 bg-background/40 backdrop-blur-[1px] pointer-events-none flex items-center justify-center z-30">
                   <span className="bg-primary/90 text-primary-foreground px-4 py-1 rounded-full font-bold text-sm transform -rotate-12 shadow-xl">
                     Coming Soon
                   </span>

@@ -1,39 +1,44 @@
 import ScrollReveal from "./ScrollReveal";
 import { ExternalLink, School, Utensils, HardHat, ShoppingBag, Camera } from "lucide-react";
+import restaurantImg from "../assets/projects/restaurant.png";
+import schoolImg from "../assets/projects/school.png";
+import photographyImg from "../assets/projects/photography.png";
+import ecommerceImg from "../assets/projects/ecommerce.png";
+import constructionImg from "../assets/projects/construction.png";
 
 const projects = [
   { 
     title: "School Management", 
     category: "Web Application", 
-    color: "from-blue-500 to-indigo-600",
+    image: schoolImg,
     icon: School,
     link: "https://school-management-demo-eta.vercel.app/"
   },
   { 
     title: "E-commerce Dress", 
     category: "E-commerce Website", 
-    color: "from-purple-500 to-pink-600",
+    image: ecommerceImg,
     icon: ShoppingBag,
     link: "https://e-commerce-sample-website-frontend-qeemzqm27.vercel.app"
   },
   { 
     title: "Restaurant Booking", 
     category: "Booking System", 
-    color: "from-orange-500 to-red-600",
+    image: restaurantImg,
     icon: Utensils,
     link: "https://restaurantbooking-8h7iu56.public.builtwithrocket.new/"
   },
   { 
     title: "Construction Company", 
     category: "Portfolio Website", 
-    color: "from-yellow-600 to-orange-700",
+    image: constructionImg,
     icon: HardHat,
     link: "https://constructionpro-ryvs519.public.builtwithrocket.new/"
   },
   { 
     title: "Photography Studio", 
     category: "Booking Website", 
-    color: "from-emerald-500 to-teal-600",
+    image: photographyImg,
     icon: Camera,
     link: "https://photography-studio-mocha.vercel.app/"
   },
@@ -62,8 +67,17 @@ const PortfolioSection = () => (
               rel="noopener noreferrer"
               className="group block glass-card rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300"
             >
-              <div className={`h-48 bg-gradient-to-br ${p.color} flex flex-col items-center justify-center relative`}>
-                <p.icon className="h-16 w-16 text-white mb-2" />
+              <div className="h-56 relative overflow-hidden">
+                <img 
+                  src={p.image} 
+                  alt={p.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="bg-white/20 p-3 rounded-full backdrop-blur-md">
+                    <p.icon className="h-8 w-8 text-white" />
+                  </div>
+                </div>
                 <div className="absolute top-4 right-4 bg-white/20 p-2 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
                   <ExternalLink className="h-5 w-5 text-white" />
                 </div>
