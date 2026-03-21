@@ -24,7 +24,7 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section id="products" className="py-24 bg-background">
+  <section id="products" className="py-12 bg-background">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto">

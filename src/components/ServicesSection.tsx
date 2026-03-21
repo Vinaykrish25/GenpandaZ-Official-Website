@@ -20,7 +20,7 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-24 bg-secondary/30">
+  <section id="services" className="py-12 bg-secondary/30">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto">

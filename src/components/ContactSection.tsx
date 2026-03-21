@@ -50,7 +50,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-12">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto">

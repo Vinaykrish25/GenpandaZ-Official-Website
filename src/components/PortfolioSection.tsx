@@ -45,7 +45,7 @@ const projects = [
 ];
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="py-24 bg-secondary/30">
+  <section id="portfolio" className="py-12 bg-secondary/30">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto">

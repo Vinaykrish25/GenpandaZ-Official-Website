@@ -2,7 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 import aboutImg from "../assets/about/about-us.png";
 
 const AboutSection = () => (
-  <section id="about" className="py-24 bg-background">
+  <section id="about" className="py-12 bg-background">
     <div className="container mx-auto px-4">
       <ScrollReveal>
         <div className="max-w-3xl mx-auto text-center mb-16">
