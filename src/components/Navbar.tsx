@@ -6,11 +6,13 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Products", href: "#products" },
   { label: "Portfolio", href: "#portfolio" },
   // { label: "Blog", href: "#blog" },
   // { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
