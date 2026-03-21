@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import { ExternalLink, School, Utensils, HardHat, ShoppingBag } from "lucide-react";
+import { ExternalLink, School, Utensils, HardHat, ShoppingBag, Camera } from "lucide-react";
 
 const projects = [
   { 
@@ -29,6 +29,13 @@ const projects = [
     color: "from-yellow-600 to-orange-700",
     icon: HardHat,
     link: "https://constructionpro-ryvs519.public.builtwithrocket.new/"
+  },
+  { 
+    title: "Photography Studio", 
+    category: "Booking Website", 
+    color: "from-emerald-500 to-teal-600",
+    icon: Camera,
+    link: "https://photography-studio-mocha.vercel.app/"
   },
 ];
 
